@@ -1,0 +1,91 @@
+#root {
+  max-width: 1280px;
+  padding: 1rem;
+  text-align: center;
+  width: 393px;
+  height: 852px;
+}
+
+.messages-wrapper {
+  position: relative;
+  overflow-y: auto;
+  height: 500px;
+}
+
+.messages {
+  margin: 1em auto;
+  background-color: #fff;
+  background: linear-gradient(
+    0deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 30%,
+    rgba(197, 50, 252, 1) 66%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  overflow-y: auto;
+}
+
+form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+input {
+  width: 100%;
+  font-size: 15px;
+  text-align: right;
+}
+
+.left {
+  flex-direction: row;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+.text {
+  display: flex;
+  width: auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 0px 16px white;
+  margin: 1rem auto;
+  min-height: 20px;
+}
+
+.right .text-p {
+  text-align: right;
+}
+
+.left .text-p {
+  text-align: left;
+}
+
+.text-p {
+  max-width: 60%;
+  min-width: 100px;
+  overflow: hidden;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 10px white;
+}
+
+.whitespace {
+  display: flex;
+  background-color: white;
+  min-height: 20px;
+  width: 100%;
+}
+
+button {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  padding: 50px 70px;
+}
