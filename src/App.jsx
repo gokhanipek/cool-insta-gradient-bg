@@ -68,9 +68,10 @@ function App() {
     const { alpha, beta, gamma } = event;
     // const betaCorrected = beta - 90;
     // setAlpha(alpha);
+    console.log(Math.sin(gamma), Math.sin(beta), Math.sin(alpha) );
     if (gamma < 90 && gamma > -90) {
       // setGamma(gamma);
-      tiltRef.current.style.backgroundPositionY = gamma + 'px';
+      tiltRef.current.style.backgroundPositionY = (Math.sin(gamma) * 20) + 'px';
     }
   }
 

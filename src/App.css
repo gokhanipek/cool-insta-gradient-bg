@@ -25,6 +25,11 @@
     rgba(170, 29, 253, 1) 80%,
     rgba(131, 58, 180, 1) 100%
   );
+  color: white;
+  font-family: tahoma;
+  font-weight: 400;
+  font-size: 13px;
+  transition: background-position 0.2s ease-in-out;
 }
 
 form {
