@@ -1,27 +1,31 @@
 #root {
   max-width: 1280px;
-  padding: 1rem;
+  /* padding: 1rem; */
   text-align: center;
   width: 393px;
   height: 852px;
 }
 
 .messages-wrapper {
+  
   position: relative;
   overflow-y: auto;
-  height: 500px;
+  background-color: #fff;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    180deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(170, 29, 253, 1) 20%,
+    rgba(51, 114, 252, 1) 40%,
+    rgba(53, 202, 212, 1) 60%,
+    rgba(170, 29, 253, 1) 80%,
+    rgba(131, 58, 180, 1) 100%
+  );
 }
 
 .messages {
   margin: 1em auto;
-  background-color: #fff;
-  background: linear-gradient(
-    0deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 30%,
-    rgba(197, 50, 252, 1) 66%,
-    rgba(252, 176, 69, 1) 100%
-  );
+
   overflow-y: auto;
 }
 
@@ -85,7 +89,8 @@ input {
 button {
   position: fixed;
   left: 0;
-  top: 0;
+  bottom: 0;
   z-index: 2;
-  padding: 50px 70px;
+  width: 100%;
+  padding: 10px 0;
 }
