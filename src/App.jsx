@@ -72,11 +72,6 @@ function App() {
       // setGamma(gamma);
       tiltRef.current.style.backgroundPositionY = gamma + 'px';
     }
-
-    if (alpha < 90 && alpha > -90) {
-      // setAlpha(alpha);
-      tiltRef.current.style.backgroundPositionX = alpha + 'px';
-    }
   }
 
   async function requestDeviceOrientation() {

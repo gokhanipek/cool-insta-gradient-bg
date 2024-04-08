@@ -7,11 +7,15 @@
 }
 
 .messages-wrapper {
-  
+
   position: relative;
   overflow-y: auto;
+  
+}
+
+.messages {
+  overflow-y: auto;
   background-color: #fff;
-  background: rgb(131, 58, 180);
   background: linear-gradient(
     180deg,
     rgba(131, 58, 180, 1) 0%,
@@ -21,12 +25,6 @@
     rgba(170, 29, 253, 1) 80%,
     rgba(131, 58, 180, 1) 100%
   );
-}
-
-.messages {
-  margin: 1em auto;
-
-  overflow-y: auto;
 }
 
 form {
