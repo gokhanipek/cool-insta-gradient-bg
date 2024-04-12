@@ -71,7 +71,8 @@ function App() {
     console.log(Math.sin(gamma), Math.sin(beta), Math.sin(alpha) );
     if (gamma < 90 && gamma > -90) {
       // setGamma(gamma);
-      tiltRef.current.style.backgroundPositionY = (Math.sin(gamma) * 100) + 'px';
+      console.log(tiltRef.current)
+      tiltRef.current.style.backgroundPositionY = (Math.sin(gamma) * 30) + 'px';
     }
   }
 
