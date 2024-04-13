@@ -15,15 +15,8 @@
 
 .messages {
   overflow-y: auto;
-  background: hsla(55, 90%, 67%, 1);
-
-background: linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(327, 89%, 71%, 1) 100%);
-
-background: -moz-linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(327, 89%, 71%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(327, 89%, 71%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7EA60", endColorstr="#3CF2DE", GradientType=1 );
+  background: rgb(131,58,180);
+  background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(154,246,63,1) 17%, rgba(145,18,157,1) 30%, rgba(32,197,188,1) 46%, rgba(138,233,50,1) 61%, rgba(252,51,70,1) 81%, rgba(143,49,202,1) 100%);  
   font-family: tahoma;
   font-weight: 400;
   font-size: 15px;
