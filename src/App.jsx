@@ -69,11 +69,9 @@ function App() {
     // const betaCorrected = beta - 90;
     // setAlpha(alpha);
     console.log(Math.sin(gamma), Math.sin(beta), Math.sin(alpha) );
-    if (gamma < 90 && gamma > -90) {
       // setGamma(gamma);
-      console.log(tiltRef.current)
-      tiltRef.current.style.backgroundPositionY = gamma + 'px';
-    }
+    console.log(tiltRef.current)
+    tiltRef.current.style.backgroundPositionY = beta + 'px';
   }
 
   async function requestDeviceOrientation() {

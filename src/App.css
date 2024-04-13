@@ -16,13 +16,12 @@
 .messages {
   overflow-y: auto;
   background-color: #fff;
-  background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(157,172,44,1) 17%, rgba(145,18,157,1) 37%, rgba(32,197,188,1) 53%, rgba(252,51,70,1) 71%, rgba(138,233,50,1) 82%, rgba(143,49,202,1) 100%);
+  background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(154,246,63,1) 17%, rgba(145,18,157,1) 30%, rgba(32,197,188,1) 46%, rgba(138,233,50,1) 61%, rgba(252,51,70,1) 81%, rgba(143,49,202,1) 100%);
   color: white;
   font-family: tahoma;
   font-weight: 400;
   font-size: 13px;
-  transition: 0.2s ease-in-out;
-  transition-duration: 0.6s;
+
 }
 
 form {
