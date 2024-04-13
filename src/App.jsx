@@ -116,7 +116,7 @@ function App() {
         />
         <button type='submit' form='form'>Send!</button>
       </form>
-      <button onClick={requestDeviceOrientation}>Enabled Gyroscope</button>
+      <button className='request-access' onClick={requestDeviceOrientation}>Enabled Gyroscope</button>
     </div>
   );
 }
