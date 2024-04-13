@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   /* padding: 1rem; */
   text-align: center;
-  width: 393px;
+  width: 100%;
   height: 852px;
 }
 
@@ -16,8 +16,15 @@
 .messages {
   overflow-y: auto;
   background-color: #fff;
-  background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(154,246,63,1) 17%, rgba(145,18,157,1) 30%, rgba(32,197,188,1) 46%, rgba(138,233,50,1) 61%, rgba(252,51,70,1) 81%, rgba(143,49,202,1) 100%);
-  color: white;
+  background: hsla(172, 85%, 74%, 1);
+
+  background: linear-gradient(90deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
+  
+  background: -moz-linear-gradient(90deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
+  
+  background: -webkit-linear-gradient(90deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#83f5e5", endColorstr="#e761bd", GradientType=1 );  color: white;
   font-family: tahoma;
   font-weight: 400;
   font-size: 15px;
