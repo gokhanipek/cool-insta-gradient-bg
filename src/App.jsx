@@ -101,19 +101,20 @@ function App() {
   return (
     <div className="messages-wrapper">
       <div ref={tiltRef} className="messages">
-        {messages.map((item) => (
-          <p className={`text ${item.sender === 'left' ? 'left' : 'right'}`}>
+        {messages.map((item, index) => (
+          <p key={index} className={`text ${item.sender === 'left' ? 'left' : 'right'}`}>
             <span className="text-p">{item.text}</span>
             <span className="whitespace" />
           </p>
         ))}
       </div>
-      <form onSubmit={formSubmit}>
+      <form onSubmit={formSubmit} id="form">
         <input
           value={inputValue}
           onChange={onChangeHandler}
           placeholder="Write away!"
         />
+        <button type='submit' form='form'>Send!</button>
       </form>
       <button onClick={requestDeviceOrientation}>Enabled Gyroscope</button>
     </div>

@@ -15,20 +15,19 @@
 
 .messages {
   overflow-y: auto;
-  background-color: #fff;
-  background: hsla(172, 85%, 74%, 1);
+  background: hsla(55, 90%, 67%, 1);
 
-  background: linear-gradient(90deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
-  
-  background: -moz-linear-gradient(90deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
-  
-  background: -webkit-linear-gradient(90deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
-  
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#83f5e5", endColorstr="#e761bd", GradientType=1 );  color: white;
+background: linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(327, 89%, 71%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(327, 89%, 71%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(327, 89%, 71%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7EA60", endColorstr="#3CF2DE", GradientType=1 );
   font-family: tahoma;
   font-weight: 400;
   font-size: 15px;
-
+  background-size: 150% 150%;
 }
 
 form {
