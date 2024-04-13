@@ -20,22 +20,26 @@
   color: white;
   font-family: tahoma;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 15px;
 
 }
 
 form {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 1;
+  width: 90%;
+  margin: 0 auto;
 }
 
 input {
   width: 100%;
   font-size: 15px;
   text-align: right;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .left {
@@ -66,7 +70,7 @@ input {
 }
 
 .text-p {
-  max-width: 60%;
+  max-width: 80%;
   min-width: 100px;
   overflow: hidden;
   padding: 10px 15px;
@@ -84,7 +88,7 @@ input {
 button {
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0;
   z-index: 2;
   width: 100%;
   padding: 10px 0;

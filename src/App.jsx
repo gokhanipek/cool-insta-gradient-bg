@@ -108,13 +108,13 @@ function App() {
           </p>
         ))}
       </div>
-      {/* <form onSubmit={formSubmit}>
+      <form onSubmit={formSubmit}>
         <input
           value={inputValue}
           onChange={onChangeHandler}
           placeholder="Write away!"
         />
-      </form> */}
+      </form>
       <button onClick={requestDeviceOrientation}>Enabled Gyroscope</button>
     </div>
   );
