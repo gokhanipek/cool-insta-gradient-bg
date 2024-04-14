@@ -22,23 +22,27 @@ const messagesArr = [
   },
   {
     sender: 'right',
-    text: 'Need to catchup with my gf, she wants to do that boring shopping shit...',
+    text: 'Need to go do the shopping today, there is nothing to eat at the fridge...',
   },
   {
     sender: 'left',
-    text: 'Thats a fucking sheisse news bruh',
+    text: 'Okay, no problem',
+  },
+  {
+    sender: 'left',
+    text: 'maybe after that you can ping us and you can join later?',
   },
   {
     sender: 'right',
-    text: 'after shopping maybe I can join you',
-  },
-  {
-    sender: 'left',
     text: 'okay, sounds good',
   },
   {
     sender: 'right',
     text: 'alright, see you guyz ',
+  },
+  {
+    sender: 'left',
+    text: 'cool, see you then!',
   },
 ];
 
