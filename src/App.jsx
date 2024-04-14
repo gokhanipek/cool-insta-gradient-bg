@@ -76,6 +76,7 @@ function App() {
       // setGamma(gamma);
     console.log(tiltRef.current)
     tiltRef.current.style.backgroundPositionY = beta + '%';
+    tiltRef.current.style.backgroundPositionX = alpha + '%';
   }
 
   async function requestDeviceOrientation() {

@@ -16,7 +16,7 @@
 .messages {
   overflow-y: auto;
   background: rgb(131,58,180);
-  background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(154,246,63,1) 9%, rgba(33,215,247,1) 18%, rgba(197,200,25,1) 26%, rgba(138,233,50,1) 35%, rgba(82,56,182,1) 48%, rgba(252,51,70,1) 57%, rgba(204,224,50,1) 68%, rgba(83,189,191,1) 75%, rgba(195,107,182,1) 85%, rgba(143,49,202,1) 100%);
+  background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(33,215,247,1) 24%, rgba(138,233,50,1) 39%, rgba(252,51,70,1) 61%, rgba(83,189,191,1) 81%, rgba(143,49,202,1) 100%);
   font-family: tahoma;
   font-weight: 400;
   font-size: 15px;
