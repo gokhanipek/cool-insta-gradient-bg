@@ -45,41 +45,16 @@ const messagesArr = [
 ];
 
 function App() {
-  const [inputValue, setInputValue] = useState('');
-  const [messages, setMessages] = useState(messagesArr);
   let tiltRef = useRef();
-  let divRef = useRef();
+  const [togglePopup, setTogglePopup] = useState(false);
 
-  // const onChangeHandler = (e) => {
-  //   setInputValue(e.target.value);
-  // };
-  // const formSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.warn(e);
-  //   const newMessages = [
-  //     ...messages,
-  //     {
-  //       sender: 'right',
-  //       text: inputValue,
-  //     },
-  //   ];
-  //   setMessages(newMessages);
-  //   setInputValue('');
-  // };
-
-  useEffect(()=> {
-    window.addEventListener('deviceorientation', handleOrientation);
-  }, [])
+  useEffect(() => {
+    setTogglePopup(true);
+  }, []);
 
   function handleOrientation(event) {
-    const { alpha, beta, gamma } = event;
+    const { alpha, beta } = event;
 
-    divRef.current = JSON.stringify(event);
-    // const betaCorrected = beta - 90;
-    // setAlpha(alpha);
-    console.log(Math.sin(gamma), Math.sin(beta), Math.sin(alpha) );
-      // setGamma(gamma);
-    console.log(tiltRef.current)
     tiltRef.current.style.backgroundPositionY = beta + '%';
     tiltRef.current.style.backgroundPositionX = alpha + '%';
   }
@@ -105,32 +80,33 @@ function App() {
     } else {
       console.error('Device does not support gyroscope');
     }
+    setTogglePopup(false);
   }
 
   return (
     <>
-    <div ref={divRef}>divRef: {divRef.current}</div>
       <div className="messages-wrapper">
-          <div ref={tiltRef} className="messages">
-            {messages.map((item, index) => (
-              <p key={index} className={`text ${item.sender === 'left' ? 'left' : 'right'}`}>
-                <span className="text-p">{item.text}</span>
-                <span className="whitespace" />
-              </p>
-            ))}
-          </div>
-          {/* <form onSubmit={formSubmit} id="form">
-            <input
-              value={inputValue}
-              onChange={onChangeHandler}
-              placeholder="Write away!"
-            />
-            <button type='submit' form='form'>Send!</button>
-          </form>
-          <button className='request-access'>Enabled Gyroscope</button> */}
+        <div ref={tiltRef} className="messages">
+          {messagesArr.map((item, index) => (
+            <p
+              key={index}
+              className={`text ${item.sender === 'left' ? 'left' : 'right'}`}
+            >
+              <span className="text-p">{item.text}</span>
+              <span className="whitespace" />
+            </p>
+          ))}
         </div>
+      </div>
+      {togglePopup && (
+        <div className="popup-overlay">
+          <div className="popup">
+            To use the sensors of this device, you need to grant access.
+            <button onClick={requestDeviceOrientation}>Enable Sensors</button>
+          </div>
+        </div>
+      )}
     </>
-
   );
 }
 
