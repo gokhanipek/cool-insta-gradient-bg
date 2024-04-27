@@ -1,7 +1,5 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
-
-import styled from 'styled-components';
 
 const messagesArr = [
   {
@@ -50,26 +48,33 @@ function App() {
   const [inputValue, setInputValue] = useState('');
   const [messages, setMessages] = useState(messagesArr);
   let tiltRef = useRef();
+  let divRef = useRef();
 
-  const onChangeHandler = (e) => {
-    setInputValue(e.target.value);
-  };
-  const formSubmit = (e) => {
-    e.preventDefault();
-    console.warn(e);
-    const newMessages = [
-      ...messages,
-      {
-        sender: 'right',
-        text: inputValue,
-      },
-    ];
-    setMessages(newMessages);
-    setInputValue('');
-  };
+  // const onChangeHandler = (e) => {
+  //   setInputValue(e.target.value);
+  // };
+  // const formSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.warn(e);
+  //   const newMessages = [
+  //     ...messages,
+  //     {
+  //       sender: 'right',
+  //       text: inputValue,
+  //     },
+  //   ];
+  //   setMessages(newMessages);
+  //   setInputValue('');
+  // };
+
+  useEffect(()=> {
+    window.addEventListener('deviceorientation', handleOrientation);
+  }, [])
 
   function handleOrientation(event) {
     const { alpha, beta, gamma } = event;
+
+    divRef.current = JSON.stringify(event);
     // const betaCorrected = beta - 90;
     // setAlpha(alpha);
     console.log(Math.sin(gamma), Math.sin(beta), Math.sin(alpha) );
@@ -80,7 +85,6 @@ function App() {
   }
 
   async function requestDeviceOrientation() {
-    console.log('clicked');
     if (
       typeof DeviceOrientationEvent !== 'undefined' &&
       typeof DeviceOrientationEvent.requestPermission === 'function'
@@ -104,25 +108,29 @@ function App() {
   }
 
   return (
-    <div className="messages-wrapper">
-      <div ref={tiltRef} className="messages">
-        {messages.map((item, index) => (
-          <p key={index} className={`text ${item.sender === 'left' ? 'left' : 'right'}`}>
-            <span className="text-p">{item.text}</span>
-            <span className="whitespace" />
-          </p>
-        ))}
-      </div>
-      <form onSubmit={formSubmit} id="form">
-        <input
-          value={inputValue}
-          onChange={onChangeHandler}
-          placeholder="Write away!"
-        />
-        <button type='submit' form='form'>Send!</button>
-      </form>
-      <button className='request-access' onClick={requestDeviceOrientation}>Enabled Gyroscope</button>
-    </div>
+    <>
+    <div ref={divRef}>divRef: {divRef.current}</div>
+      <div className="messages-wrapper">
+          <div ref={tiltRef} className="messages">
+            {messages.map((item, index) => (
+              <p key={index} className={`text ${item.sender === 'left' ? 'left' : 'right'}`}>
+                <span className="text-p">{item.text}</span>
+                <span className="whitespace" />
+              </p>
+            ))}
+          </div>
+          {/* <form onSubmit={formSubmit} id="form">
+            <input
+              value={inputValue}
+              onChange={onChangeHandler}
+              placeholder="Write away!"
+            />
+            <button type='submit' form='form'>Send!</button>
+          </form>
+          <button className='request-access'>Enabled Gyroscope</button> */}
+        </div>
+    </>
+
   );
 }
 
